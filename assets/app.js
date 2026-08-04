@@ -363,9 +363,41 @@
     });
   }
 
+  // Scroll-Spy für Anchor-Nav (Unterseiten mit Sidebar)
+  function initAnchorNav() {
+    const nav = document.querySelector("[data-anchor-nav]");
+    if (!nav) return;
+    const links = Array.from(nav.querySelectorAll("[data-anchor-link]"));
+    if (!links.length) return;
+    const sections = links
+      .map((l) => document.getElementById(l.getAttribute("href").slice(1)))
+      .filter(Boolean);
+    if (!sections.length) return;
+
+    function setActive(id) {
+      links.forEach((l) => {
+        const active = l.getAttribute("href") === "#" + id;
+        if (active) l.setAttribute("aria-current", "location");
+        else l.removeAttribute("aria-current");
+      });
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length) setActive(visible[0].target.id);
+      },
+      { rootMargin: "-100px 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach((s) => observer.observe(s));
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initFaelle();
     initProbleme();
     initMenu();
+    initAnchorNav();
   });
 })();

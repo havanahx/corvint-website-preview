@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KI-Lösungen — corvint. (Preview)</title>
+    <meta
+      name="description"
+      content="Wie wir Anwendungsfälle auswählen, welche Werkzeuge sich für welchen Zweck lohnen, und wie ihr in drei Minuten selbst prüft, ob KI bei euch trägt."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#FAFAFA" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Direkt zum Inhalt</a>
+    <div class="preview-banner" role="status">
+      <strong>Vorschau.</strong> Inhalte noch nicht final — Design steht.
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Corvint Startseite">
+        <svg
+          class="raven raven--build"
+          viewBox="0 0 180 180"
+          width="38"
+          height="38"
+          aria-hidden="true"
+        >
+          <g class="raven__body">
+            <path
+              fill="#2F2325"
+              d="M130 33c-20 3-37 15-45 33-15-4-31-1-43 8 13 2 22 8 27 17-8 21-7 41 3 57 8-15 20-25 35-31 18-7 29-23 30-42 1-16-1-30-7-42Z"
+            ></path>
+            <circle cx="117" cy="57" r="4" fill="#FAFAFA"></circle>
+            <g class="raven__beak">
+              <path fill="#0E3EFF" d="m131 57 30 12-29 5c-4-5-4-11-1-17Z"></path>
+            </g>
+            <path
+              fill="none"
+              stroke="#5B6470"
+              stroke-linecap="round"
+              stroke-width="5"
+              d="M83 142 72 161m24-20 9 20"
+            ></path>
+          </g>
+        </svg>
+        <span class="brand__logo">corvint.</span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Menü öffnen"
+        data-menu-toggle
+      >
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path
+            stroke="#2F2325"
+            stroke-width="2"
+            stroke-linecap="round"
+            fill="none"
+            d="M4 7h16M4 12h16M4 17h16"
+          ></path>
+        </svg>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Hauptnavigation" data-nav>
+        <button
+          class="nav__close"
+          type="button"
+          aria-label="Menü schließen"
+          data-menu-close
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path
+              stroke="#2F2325"
+              stroke-width="2"
+              stroke-linecap="round"
+              d="M6 6l12 12M18 6L6 18"
+            ></path>
+          </svg>
+        </button>
+        <a class="nav__link" href="ki-beratung.html">KI-Beratung</a>
+        <a class="nav__link" href="ki-sprechstunden.html">KI-Sprechstunden</a>
+        <a class="nav__link" href="ki-loesungen.html" aria-current="page">KI-Lösungen</a>
+        <a class="nav__link" href="ueber-corvint.html">Über corvint</a>
+        <a class="nav__link" href="ki-wissen-news.html">KI-Wissen &amp; News</a>
+        <a
+          class="btn btn--primary btn--small"
+          href="https://calendly.com/hannah-corvint/30min"
+          target="_blank"
+          rel="noopener"
+          >Erstgespräch buchen</a
+        >
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="sub-hero" aria-labelledby="page-titel">
+        <p class="sub-hero__eyebrow">KI-Lösungen</p>
+        <h1 id="page-titel" class="sub-hero__title">
+          Erst der Fall. Dann das Werkzeug.
+        </h1>
+        <p class="sub-hero__lead">
+          Wir wählen Anwendungen, die sich rechnen und im Alltag durchhalten.
+          Softwareneutral, mit euren echten Fällen getestet, ohne Provision von
+          irgendeinem Anbieter.
+        </p>
+        <div class="sub-hero__actions">
+          <a class="btn btn--primary" href="#selbstcheck">Selbstcheck starten</a>
+          <a
+            class="btn btn--secondary"
+            href="https://calendly.com/hannah-corvint/30min"
+            target="_blank"
+            rel="noopener"
+            >Erstgespräch buchen</a
+          >
+        </div>
+      </section>
+
+      <div class="page">
+        <aside class="page__sidebar" aria-label="Auf dieser Seite">
+          <nav class="anchor-nav" data-anchor-nav>
+            <div class="anchor-nav__label">Auf dieser Seite</div>
+            <a class="anchor-nav__link" href="#auswahl" data-anchor-link
+              >So wählen wir aus</a
+            >
+            <a class="anchor-nav__link" href="#beispiele" data-anchor-link
+              >Beispielfälle</a
+            >
+            <a class="anchor-nav__link" href="#werkzeuge" data-anchor-link
+              >Werkzeuge und Neutralität</a
+            >
+            <a class="anchor-nav__link" href="#selbstcheck" data-anchor-link
+              >Selbstcheck</a
+            >
+            <a class="anchor-nav__link" href="#faq" data-anchor-link
+              >Häufige Fragen</a
+            >
+          </nav>
+        </aside>
+
+        <div class="page__main">
+          <section id="auswahl" class="article-section">
+            <p class="article-section__eyebrow">01</p>
+            <h2 class="article-section__title">So wählen wir aus</h2>
+            <div class="article-section__body">
+              <p>
+                Ein Anwendungsfall wird nicht dadurch gut, dass es dafür ein
+                spannendes Werkzeug gibt. Wir prüfen drei Fragen — in dieser
+                Reihenfolge:
+              </p>
+              <ul>
+                <li>
+                  <strong>Wirkung.</strong> Löst der Fall ein echtes Problem?
+                  Lässt sich das vorher/nachher belegen?
+                </li>
+                <li>
+                  <strong>Umsetzbarkeit.</strong> Sind die nötigen Daten da? Sind
+                  die Menschen ansprechbar? Passt es zum Rhythmus des Alltags?
+                </li>
+                <li>
+                  <strong>Reife.</strong> Ist das Werkzeug erwachsen genug für
+                  Produktion — oder noch Demo?
+                </li>
+              </ul>
+              <p>
+                Nur Fälle, die alle drei Fragen bestehen, kommen in Modul 2.
+                Der Rest wird dokumentiert, priorisiert, aufgeschoben.
+              </p>
+            </div>
+          </section>
+
+          <section id="beispiele" class="article-section">
+            <p class="article-section__eyebrow">02</p>
+            <h2 class="article-section__title">Beispielfälle</h2>
+            <div class="article-section__body">
+              <p>
+                Drei Fälle, die wir häufig zuerst umsetzen. Auf der Startseite
+                könnt ihr für jeden davon sehen, was sich im Ablauf ändert und
+                was es rechnerisch bringt.
+              </p>
+            </div>
+            <div class="modules">
+              <article class="module">
+                <div class="module__head">
+                  <svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true">
+                    <circle cx="15" cy="15" r="14" fill="#2F2325"></circle>
+                    <circle cx="15" cy="15" r="5" fill="#FAFAFA"></circle>
+                  </svg>
+                  <span class="module__label">FALL 1</span>
+                </div>
+                <div class="module__title">Angebote erstellen</div>
+                <div class="module__body">
+                  Vertrieb und Projektleitung. Unterlagen auswerten und Entwurf
+                  vorbereiten läuft mit KI, Prüfung und Preisentscheidung
+                  bleibt beim Menschen.
+                </div>
+              </article>
+              <article class="module">
+                <div class="module__head">
+                  <svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true">
+                    <circle cx="15" cy="15" r="14" fill="#2F2325"></circle>
+                    <circle cx="15" cy="15" r="5" fill="#FAFAFA"></circle>
+                  </svg>
+                  <span class="module__label">FALL 2</span>
+                </div>
+                <div class="module__title">Ausschreibungen sichten</div>
+                <div class="module__body">
+                  Geschäftsführung und Bauleitung. Eingänge werden gesammelt und
+                  gegen eure Kriterien geprüft, Zusagen und Absagen entscheidet
+                  die GF.
+                </div>
+              </article>
+              <article class="module">
+                <div class="module__head">
+                  <svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true">
+                    <circle cx="15" cy="15" r="14" fill="#2F2325"></circle>
+                    <circle cx="15" cy="15" r="5" fill="#FAFAFA"></circle>
+                  </svg>
+                  <span class="module__label">FALL 3</span>
+                </div>
+                <div class="module__title">Protokolle und Nachverfolgung</div>
+                <div class="module__body">
+                  Projektteams. Termin aufzeichnen und protokollieren, Aufgaben
+                  ableiten — Projektleitung prüft und gibt frei.
+                </div>
+              </article>
+            </div>
+            <div class="article-section__body">
+              <p>
+                Weitere Fälle aus unseren laufenden Projekten: interne
+                Wissenssuche in Projektakten, Wiederverwendung von
+                Vertragsbausteinen, technische Dokumentation, Onboarding-Assistenz,
+                Rechnungsprüfung. Welcher davon zu euch passt, klärt Modul 1.
+              </p>
+            </div>
+          </section>
+
+          <section id="werkzeuge" class="article-section">
+            <p class="article-section__eyebrow">03</p>
+            <h2 class="article-section__title">Werkzeuge und Neutralität</h2>
+            <div class="article-section__body">
+              <p>
+                Wir bekommen von keinem Werkzeughersteller Provision. Kein
+                Bonus, keine „Reseller-Marge", kein verdeckter Preisaufschlag.
+                Die Rechnung des Werkzeugs geht direkt an euch, die
+                Beratungsleistung an uns — zwei getrennte Verträge.
+              </p>
+              <p>
+                Wir haben mit den meisten großen Anbietern und einer Reihe
+                spezialisierter Werkzeuge gearbeitet — deshalb kennen wir Stärken
+                und Grenzen. Die Auswahl folgt aber immer eurem Fall, nicht
+                unserem Erfahrungsprofil.
+              </p>
+              <blockquote class="pull-quote">
+                Wenn wir sagen „nehmt das", steht kein Vertriebsziel dahinter.
+              </blockquote>
+            </div>
+          </section>
+
+          <section id="selbstcheck" class="article-section">
+            <p class="article-section__eyebrow">04</p>
+            <h2 class="article-section__title">Selbstcheck</h2>
+            <div class="article-section__body">
+              <p>
+                Zehn ehrliche Fragen, drei Minuten, sofort ein Ergebnis: Wo steht
+                euer Unternehmen, was trägt heute schon, was braucht noch
+                Fundament. Kein E-Mail-Formular davor.
+              </p>
+              <p>
+                <strong>Der Selbstcheck kommt hier bald direkt eingebettet.</strong>
+                Solange nutzt bitte die separate Seite:
+              </p>
+              <div class="sub-hero__actions">
+                <a class="btn btn--primary" href="selbstcheck.html"
+                  >Selbstcheck öffnen</a
+                >
+              </div>
+            </div>
+          </section>
+
+          <section id="faq" class="article-section">
+            <p class="article-section__eyebrow">05</p>
+            <h2 class="article-section__title">Häufige Fragen</h2>
+            <div class="faq">
+              <details class="faq__item">
+                <summary class="faq__summary">
+                  Wir haben schon ein Werkzeug. Wechseln wir?
+                </summary>
+                <div class="faq__body">
+                  Meistens nicht. Vorhandene Werkzeuge richtig einsetzen bringt
+                  oft mehr als ein Wechsel. Wenn ein Wechsel wirklich sinnvoll
+                  ist, sagen wir es — mit Begründung.
+                </div>
+              </details>
+              <details class="faq__item">
+                <summary class="faq__summary">
+                  Ist Open Source eine Alternative?
+                </summary>
+                <div class="faq__body">
+                  Ja, für bestimmte Fälle. Wir prüfen Kosten und Aufwand realistisch
+                  — Open Source ist nicht automatisch günstiger.
+                </div>
+              </details>
+              <details class="faq__item">
+                <summary class="faq__summary">
+                  Was ist mit Daten, die das Haus nicht verlassen dürfen?
+                </summary>
+                <div class="faq__body">
+                  Es gibt Werkzeuge, die on-premise oder in eurer eigenen Cloud
+                  laufen. Wir wählen den Rahmen so, dass Datenschutz und Fall
+                  zusammenpassen.
+                </div>
+              </details>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="cta" aria-labelledby="cta-titel">
+        <div class="wrap cta__inner">
+          <div class="cta__text">
+            <h2 id="cta-titel" class="cta__title">
+              Wo soll KI euch Arbeit abnehmen?
+            </h2>
+            <p class="cta__lead">
+              Der Selbstcheck sortiert schon einmal vor. Danach: Erstgespräch,
+              30 Minuten, unverbindlich.
+            </p>
+          </div>
+          <div class="cta__actions">
+            <a
+              class="btn btn--on-dark"
+              href="https://calendly.com/hannah-corvint/30min"
+              target="_blank"
+              rel="noopener"
+              >Erstgespräch buchen</a
+            >
+            <a class="btn btn--ghost-on-dark" href="#selbstcheck"
+              >Selbstcheck starten</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__top">
+        <div class="site-footer__brand">
+          <div class="site-footer__brand-row">
+            <svg
+              viewBox="0 0 180 180"
+              width="32"
+              height="32"
+              aria-hidden="true"
+            >
+              <path
+                fill="#FAFAFA"
+                d="M130 33c-20 3-37 15-45 33-15-4-31-1-43 8 13 2 22 8 27 17-8 21-7 41 3 57 8-15 20-25 35-31 18-7 29-23 30-42 1-16-1-30-7-42Z"
+              ></path>
+              <path fill="#0E3EFF" d="m131 57 30 12-29 5c-4-5-4-11-1-17Z"></path>
+              <circle cx="117" cy="57" r="4" fill="#2F2325"></circle>
+            </svg>
+            <span class="site-footer__brand-word">corvint.</span>
+          </div>
+          <div class="site-footer__desc">
+            KI- und Organisationsberatung für den Mittelstand. DACH, remote und
+            vor Ort.
+          </div>
+        </div>
+        <div class="site-footer__cols">
+          <nav class="site-footer__col" aria-label="Leistungen">
+            <a href="ki-beratung.html">KI-Beratung</a>
+            <a href="ki-sprechstunden.html">KI-Sprechstunden</a>
+            <a href="ki-loesungen.html">KI-Lösungen</a>
+          </nav>
+          <nav class="site-footer__col" aria-label="Unternehmen">
+            <a href="ueber-corvint.html">Über corvint</a>
+            <a href="ki-wissen-news.html">KI-Wissen &amp; News</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="index.html#grundsaetze">Grundsätze</a>
+          </nav>
+          <nav class="site-footer__col" aria-label="Rechtliches">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+          </nav>
+        </div>
+      </div>
+      <div class="wrap site-footer__legal">
+        © Corvint Consulting · KI, sinnvoll eingearbeitet.
+      </div>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>

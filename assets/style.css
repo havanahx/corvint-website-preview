@@ -1369,42 +1369,100 @@ svg {
   }
 }
 
-/* Typische Ausgangssituationen (kompakte 3-Card-Reihe) */
-.starts {
+/* Section-Split: Titel links, Ergebnis-/Info-Karte rechts */
+.section-split {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  margin: 22px 0 8px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 4px;
 }
-.starts__card {
-  border-top: 2px solid var(--ink);
-  padding-top: 14px;
+.section-split > .article-section__title {
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .section-split {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Ergebnis-Karte (mit Häkchen) */
+.result-card {
+  border: 2px solid var(--ink);
+  background: var(--white);
+  padding: 20px 24px 22px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
-.starts__label {
-  font-size: 11px;
+.result-card__label {
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
   color: var(--slate);
   text-transform: uppercase;
 }
-.starts__from {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.35;
+.result-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.result-card__list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.4;
   color: var(--ink);
 }
-.starts__to {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--slate);
+.result-card__check {
+  flex: none;
+  margin-top: 3px;
 }
-@media (max-width: 900px) {
-  .starts {
-    grid-template-columns: 1fr;
-  }
+
+/* Callout (eingefärbter Absatz, blue-tint) */
+.callout {
+  background: var(--blue-tint);
+  padding: 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 8px 0;
+}
+.callout__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--blue);
+  text-transform: uppercase;
+}
+.callout__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.callout__list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.callout__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 10px;
+  height: 1px;
+  background: var(--blue);
 }
 
 /* Passt das zu euch (Gute Passung / Weniger Passung + Voraussetzungen) */

@@ -1449,6 +1449,134 @@ svg {
   font-weight: 600;
 }
 
+/* Person-Block mit Qualifikationen (Warum corvint) */
+.person-block {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+  max-width: 1120px;
+}
+.person-block + .person-block {
+  border-top: 1px solid var(--rule);
+  padding-top: 40px;
+  margin-top: 40px;
+}
+.person-block__portrait {
+  margin: 0;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+}
+.person-block__portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 30%;
+  display: block;
+}
+.person-block__portrait-caption {
+  padding: 12px 16px;
+  border-top: 1px solid var(--rule);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--slate);
+}
+.person-block__icon-frame {
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.person-block__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.person-block__name {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.person-block__role {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-top: -12px;
+}
+.person-block__bio {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0;
+}
+.qualifications {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+.qual-block__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin: 0 0 12px;
+}
+.qual-block__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.qual-block__list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.qual-block__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 10px;
+  height: 1px;
+  background: var(--slate);
+}
+@media (max-width: 900px) {
+  .person-block {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .person-block__portrait,
+  .person-block__icon-frame {
+    max-width: 240px;
+  }
+}
+@media (max-width: 720px) {
+  .qualifications {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 /* Kontakt-Zeilen (Warum corvint) */
 .contact-list {
   list-style: none;

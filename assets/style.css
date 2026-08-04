@@ -1274,19 +1274,20 @@ svg {
   }
 }
 
-/* Rollen-Diagramm (Unsere / Eure Seite) */
+/* Rollen-Diagramm (Unsere / Eure Seite)
+ * Zwei Spalten, jede mit Rollen-Karten (Person + Zuständigkeit)
+ * plus Ressourcen-Bullets und ein hervorgehobener Kernsatz.
+ */
 .roles {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 40px;
   margin: 24px 0 8px;
 }
 .roles__col {
-  border-top: 1px solid var(--rule);
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 4px;
 }
 .roles__label {
   font-size: 12px;
@@ -1294,25 +1295,44 @@ svg {
   letter-spacing: 0.14em;
   color: var(--slate);
   text-transform: uppercase;
+  padding-bottom: 8px;
 }
-.roles__lead {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.role-card {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  align-items: start;
+  border-top: 1px solid var(--rule);
+  padding: 16px 0;
 }
-.roles__lead-icon {
+.role-card__icon {
   flex: none;
+  padding-top: 2px;
 }
-.roles__lead-text {
-  font-size: 18px;
+.role-card__name {
+  font-size: 17px;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.3;
   color: var(--ink);
+}
+.role-card__role {
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.45;
+  margin-top: 3px;
+}
+.roles__note {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--slate);
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
 }
 .roles__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 6px 0 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1333,10 +1353,19 @@ svg {
   height: 1px;
   background: var(--slate);
 }
+.roles__key {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
 @media (max-width: 720px) {
   .roles {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 32px;
   }
 }
 

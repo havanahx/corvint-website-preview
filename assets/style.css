@@ -1387,6 +1387,28 @@ svg {
   }
 }
 
+/* Was-wir-tun-Grid (Startseite): Prozess-Kette links, Ergebnis-Karte rechts */
+.wwt-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+  gap: 56px;
+  align-items: start;
+}
+.wwt-grid__main {
+  min-width: 0;
+}
+.wwt-grid__hint {
+  font-size: 15px;
+  color: var(--slate);
+  margin: 0 0 16px;
+}
+@media (max-width: 900px) {
+  .wwt-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 /* Section-Split: Titel links, Ergebnis-/Info-Karte rechts */
 .section-split {
   display: grid;
@@ -2093,10 +2115,10 @@ svg {
   gap: 8px;
 }
 .kpi__value {
-  font-size: 60px;
+  font-size: 44px;
   font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.03em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: var(--ink);
 }
 .kpi__value--blue {

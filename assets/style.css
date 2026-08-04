@@ -1369,6 +1369,279 @@ svg {
   }
 }
 
+/* Typische Ausgangssituationen (kompakte 3-Card-Reihe) */
+.starts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 22px 0 8px;
+}
+.starts__card {
+  border-top: 2px solid var(--ink);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.starts__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--slate);
+  text-transform: uppercase;
+}
+.starts__from {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.starts__to {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--slate);
+}
+@media (max-width: 900px) {
+  .starts {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Passt das zu euch (Gute Passung / Weniger Passung + Voraussetzungen) */
+.fit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0 8px;
+}
+.fit__card {
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.fit__card--yes {
+  border: 2px solid var(--ink);
+  background: var(--white);
+}
+.fit__card--no {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.fit__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.fit__card--yes .fit__label {
+  color: var(--blue);
+}
+.fit__card--no .fit__label {
+  color: var(--slate);
+}
+.fit__title {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.fit__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fit__list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--slate);
+}
+.fit__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 10px;
+  height: 1px;
+  background: var(--slate);
+}
+.fit__card--yes .fit__list li::before {
+  background: var(--blue);
+  height: 2px;
+  top: 0.55em;
+}
+@media (max-width: 720px) {
+  .fit {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Voraussetzungen (Streifen unter der Passung) */
+.prereq {
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 200px) 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.prereq__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+  padding-top: 4px;
+}
+.prereq__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.prereq__list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.prereq__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 10px;
+  height: 1px;
+  background: var(--slate);
+}
+@media (max-width: 720px) {
+  .prereq {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Modul-Karten: interne Steps + Preis-Fuss */
+.module__steps {
+  counter-reset: mstep;
+  list-style: none;
+  padding: 12px 0 0;
+  margin: 4px 0 0;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.module__steps li {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--slate);
+  padding-left: 28px;
+  position: relative;
+  counter-increment: mstep;
+}
+.module__steps li::before {
+  content: counter(mstep, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.module__price {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.module__price-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.module__price-note {
+  font-size: 11px;
+  color: var(--blue);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.module__price-note--muted {
+  color: var(--slate);
+}
+
+/* Kompakte Preistabelle in Sektion "Preise und Förderung" */
+.pricing {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--ink);
+  margin: 20px 0 8px;
+}
+.pricing__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, auto);
+  gap: 20px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.pricing__name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.pricing__module {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.pricing__title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.pricing__value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.pricing__foerder {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--blue);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.pricing__foerder--muted {
+  color: var(--slate);
+}
+@media (max-width: 720px) {
+  .pricing__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 14px 0;
+  }
+}
+
 /* Förder-Kacheln */
 .foerder {
   display: grid;

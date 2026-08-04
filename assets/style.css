@@ -1434,7 +1434,7 @@ svg {
   }
 }
 
-/* Wie-wir-arbeiten Prinzipien-Liste — mit grosser nummer als anker */
+/* Wie-wir-arbeiten Prinzipien-Liste — nummer absolut, text normal im fluss */
 .principles-list {
   counter-reset: princ;
   list-style: none;
@@ -1442,22 +1442,24 @@ svg {
   margin: 28px 0 8px;
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 .principles-list li {
   counter-increment: princ;
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  gap: 20px;
-  padding: 24px 0;
+  position: relative;
+  padding: 24px 0 24px 68px;
   border-top: 1px solid var(--rule);
-  align-items: baseline;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--slate);
 }
 .principles-list li:first-child {
   border-top: 2px solid var(--ink);
 }
 .principles-list li::before {
   content: counter(princ, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 26px;
   font-size: 20px;
   font-weight: 600;
   color: var(--blue);
@@ -1472,19 +1474,13 @@ svg {
   font-weight: 600;
   line-height: 1.3;
 }
-.principles-list li {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--slate);
-}
 @media (max-width: 720px) {
   .principles-list li {
-    grid-template-columns: 44px 1fr;
-    gap: 16px;
-    padding: 20px 0;
+    padding: 20px 0 20px 44px;
   }
   .principles-list li::before {
     font-size: 16px;
+    top: 22px;
   }
   .principles-list li strong {
     font-size: 17px;

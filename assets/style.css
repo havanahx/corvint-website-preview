@@ -1037,7 +1037,7 @@ svg {
   min-width: 0;
 }
 
-/* Sub-Hero (kompakter als Startseite) */
+/* Sub-Hero (kompakter als Startseite) — optional mit Info-Karte rechts */
 .sub-hero {
   padding: 56px 64px 32px;
   max-width: 1312px;
@@ -1047,6 +1047,24 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.sub-hero--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+  gap: 48px;
+  align-items: start;
+}
+.sub-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+@media (max-width: 900px) {
+  .sub-hero--split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 .sub-hero__eyebrow {
   font-size: 12px;
@@ -1639,6 +1657,133 @@ svg {
 }
 .module__price-note--muted {
   color: var(--slate);
+}
+
+/* Modul-Details (aufklappbar) */
+.module__more {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+.module__more > summary {
+  padding: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 150ms ease-out;
+}
+.module__more > summary::-webkit-details-marker,
+.module__more > summary::marker {
+  display: none;
+  content: "";
+}
+.module__more > summary::after {
+  content: "+";
+  color: var(--slate);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  transition: transform 150ms ease-out;
+}
+.module__more[open] > summary::after {
+  transform: rotate(45deg);
+}
+.module__more > summary:hover,
+.module__more > summary:focus-visible {
+  color: var(--blue-hover);
+}
+.module__more .module__steps {
+  padding-top: 10px;
+  margin-top: 0;
+  border-top: 0;
+}
+
+/* Roles-lean (schlankere Rollen-Darstellung) */
+.roles-lean {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 20px 0 8px;
+}
+.roles-lean__col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid var(--rule);
+  padding-top: 16px;
+}
+.roles-lean__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--slate);
+  text-transform: uppercase;
+}
+.roles-lean__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.roles-lean__list li {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.roles-lean__list li strong {
+  font-weight: 600;
+}
+.roles-lean__foot {
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.55;
+  margin: 6px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+}
+@media (max-width: 720px) {
+  .roles-lean {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* Foerder-lean (schlanker als Kacheln) */
+.foerder-lean {
+  margin: 18px 0 8px;
+  border-top: 1px solid var(--rule);
+}
+.foerder-lean__item {
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 220px) 1fr;
+  gap: 24px;
+  align-items: baseline;
+}
+.foerder-lean__name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.foerder-lean__note {
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.55;
+}
+@media (max-width: 720px) {
+  .foerder-lean__item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 12px 0;
+  }
 }
 
 /* Kompakte Preistabelle in Sektion "Preise und Förderung" */

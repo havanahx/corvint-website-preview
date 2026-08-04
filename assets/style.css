@@ -1387,6 +1387,102 @@ svg {
   }
 }
 
+/* USP-Karten (Warum corvint) */
+.usps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  margin: 20px 0 4px;
+}
+.usp {
+  border-top: 2px solid var(--ink);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.usp__n {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--blue);
+}
+.usp__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  color: var(--ink);
+}
+.usp__body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--slate);
+  margin: 0;
+}
+
+/* Wie-wir-arbeiten Prinzipien-Liste */
+.principles-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.principles-list li {
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--slate);
+}
+.principles-list li:first-child {
+  border-top: 2px solid var(--ink);
+  padding-top: 20px;
+}
+.principles-list li strong {
+  display: block;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/* Kontakt-Zeilen (Warum corvint) */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 4px;
+  display: grid;
+  grid-template-columns: minmax(0, 180px) 1fr;
+  gap: 8px 24px;
+  align-items: baseline;
+}
+.contact-list dt {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+  padding-top: 4px;
+}
+.contact-list dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+@media (max-width: 720px) {
+  .contact-list {
+    grid-template-columns: 1fr;
+    gap: 4px 0;
+  }
+  .contact-list dt {
+    margin-top: 12px;
+  }
+}
+
 /* Mehrwert-Liste (Case-Card auf ki-beratung-b) */
 .benefits {
   list-style: none;

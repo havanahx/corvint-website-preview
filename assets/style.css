@@ -1201,6 +1201,202 @@ svg {
   }
 }
 
+/* Prozess-Kette (visueller Ablauf, vertikal) */
+.step-chain {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 8px;
+  display: flex;
+  flex-direction: column;
+}
+.step-chain__item {
+  display: grid;
+  grid-template-columns: 40px 24px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding-bottom: 22px;
+}
+.step-chain__item:last-child {
+  padding-bottom: 0;
+}
+.step-chain__n {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--slate);
+  padding-top: 4px;
+}
+.step-chain__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-top: 4px;
+}
+.step-chain__dot {
+  width: 12px;
+  height: 12px;
+  background: var(--ink);
+  flex: none;
+}
+.step-chain__line {
+  width: 1px;
+  background: var(--rule);
+  flex: 1;
+  margin: 6px 0 -22px;
+  min-height: 24px;
+}
+.step-chain__item:last-child .step-chain__line {
+  display: none;
+}
+.step-chain__content {
+  min-width: 0;
+}
+.step-chain__label {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+.step-chain__detail {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--slate);
+}
+@media (max-width: 720px) {
+  .step-chain__item {
+    grid-template-columns: 32px 18px 1fr;
+    gap: 12px;
+  }
+  .step-chain__n {
+    font-size: 11px;
+  }
+}
+
+/* Rollen-Diagramm (Unsere / Eure Seite) */
+.roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 24px 0 8px;
+}
+.roles__col {
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.roles__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--slate);
+  text-transform: uppercase;
+}
+.roles__lead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.roles__lead-icon {
+  flex: none;
+}
+.roles__lead-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.roles__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.roles__list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--slate);
+}
+.roles__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 10px;
+  height: 1px;
+  background: var(--slate);
+}
+@media (max-width: 720px) {
+  .roles {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Förder-Kacheln */
+.foerder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0 8px;
+}
+.foerder__card {
+  border: 2px solid var(--ink);
+  background: var(--white);
+  padding: 24px 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.foerder__mark {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  opacity: 0.9;
+}
+.foerder__scope {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--blue);
+  text-transform: uppercase;
+}
+.foerder__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  max-width: 78%;
+}
+.foerder__body {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--slate);
+}
+.foerder__meta {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.5;
+}
+@media (max-width: 720px) {
+  .foerder {
+    grid-template-columns: 1fr;
+  }
+  .foerder__title {
+    max-width: 100%;
+  }
+}
+
 /* Pull-Quote (Hervorhebung im Content) — ohne Balken, nur größerer Text */
 .pull-quote {
   font-size: 22px;

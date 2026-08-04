@@ -2074,6 +2074,134 @@ svg {
   }
 }
 
+/* Kennzahlen-Zeile (fuer B-Layouts / Landing-Style) */
+.kpi {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  padding: 60px 64px;
+  max-width: 1312px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.kpi__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.kpi__value {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.kpi__value--blue {
+  color: var(--blue);
+}
+.kpi__label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--slate);
+}
+@media (max-width: 900px) {
+  .kpi {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 32px;
+  }
+  .kpi__value {
+    font-size: 44px;
+  }
+}
+@media (max-width: 720px) {
+  .kpi {
+    padding: 32px 20px;
+  }
+}
+
+/* Fit-dark: passt-das im dunklen bereich (B-layout) */
+.fit-dark {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 24px 0 8px;
+}
+.fit-dark__col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--slate);
+}
+.fit-dark__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.fit-dark__col--yes .fit-dark__label {
+  color: var(--blue-tint);
+}
+.fit-dark__col--no .fit-dark__label {
+  color: var(--slate-light);
+}
+.fit-dark__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fit-dark__list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--paper);
+}
+.fit-dark__col--yes .fit-dark__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 10px;
+  height: 2px;
+  background: var(--blue);
+}
+.fit-dark__col--no .fit-dark__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 10px;
+  height: 1px;
+  background: var(--slate-light);
+  opacity: 0.5;
+}
+.fit-dark__prereq {
+  border-top: 1px solid var(--slate);
+  padding-top: 20px;
+  margin-top: 28px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--slate-light);
+}
+.fit-dark__prereq strong {
+  color: var(--paper);
+  font-weight: 600;
+}
+@media (max-width: 720px) {
+  .fit-dark {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
 /* Preview-Banner (nur Vorschau, nie live) */
 .preview-banner {
   background: var(--ink);

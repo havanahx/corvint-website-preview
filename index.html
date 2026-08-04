@@ -60,7 +60,40 @@
         </svg>
         <span class="brand__logo">corvint.</span>
       </a>
-      <nav class="nav" aria-label="Hauptnavigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Menü öffnen"
+        data-menu-toggle
+      >
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path
+            stroke="#2F2325"
+            stroke-width="2"
+            stroke-linecap="round"
+            fill="none"
+            d="M4 7h16M4 12h16M4 17h16"
+          ></path>
+        </svg>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Hauptnavigation" data-nav>
+        <button
+          class="nav__close"
+          type="button"
+          aria-label="Menü schließen"
+          data-menu-close
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path
+              stroke="#2F2325"
+              stroke-width="2"
+              stroke-linecap="round"
+              d="M6 6l12 12M18 6L6 18"
+            ></path>
+          </svg>
+        </button>
         <a class="nav__link" href="angebot.html">KI-Beratung</a>
         <a class="nav__link" href="#grundsaetze">Grundsätze</a>
         <a class="nav__link" href="#was-sich-aendert">KI-Lösungen</a>
@@ -81,6 +114,7 @@
       <section class="hero">
         <div class="wrap wrap--hero hero__grid">
           <div class="hero__copy">
+            <p class="hero__eyebrow">Für Unternehmen von 20 bis 200 Mitarbeitenden</p>
             <h1 class="hero__title">
               Ihr wollt oder habt KI. Jetzt braucht sie nur noch eine Aufgabe.
             </h1>
@@ -100,6 +134,18 @@
               <a class="btn btn--secondary" href="angebot.html">Angebot ansehen</a>
               <span class="hero__note">30 Minuten · kostenlos</span>
             </div>
+            <p class="hero__segments" aria-label="Typische Branchen">
+              <span class="hero__segments-label">Häufig bei:</span>
+              <span>Ingenieur- und Planungsbüros</span
+              ><span aria-hidden="true">·</span>
+              <span>Kanzleien</span
+              ><span aria-hidden="true">·</span>
+              <span>Softwarehäuser</span
+              ><span aria-hidden="true">·</span>
+              <span>Agenturen</span
+              ><span aria-hidden="true">·</span>
+              <span>technischer Mittelstand</span>
+            </p>
           </div>
 
           <aside class="case-card" aria-label="Beispielrechnung">
@@ -281,28 +327,88 @@
           </h2>
           <div class="dimensions">
             <div class="dimension">
-              <div class="dimension__label">01 · Mensch</div>
+              <div class="dimension__label">
+                <span>01</span>
+                <svg
+                  class="dimension__beak"
+                  viewBox="0 0 40 22"
+                  width="20"
+                  height="11"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="#0E3EFF"
+                    d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"
+                  ></path>
+                </svg>
+                <span>Mensch</span>
+              </div>
               <div class="dimension__body">
                 Wer damit arbeitet, versteht vorher, was die KI kann und wo ihre
                 Grenzen liegen. Befähigung passend zur Rolle.
               </div>
             </div>
             <div class="dimension">
-              <div class="dimension__label">02 · Organisation</div>
+              <div class="dimension__label">
+                <span>02</span>
+                <svg
+                  class="dimension__beak"
+                  viewBox="0 0 40 22"
+                  width="20"
+                  height="11"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="#0E3EFF"
+                    d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"
+                  ></path>
+                </svg>
+                <span>Organisation</span>
+              </div>
               <div class="dimension__body">
                 Rollen, Zuständigkeiten und Regeln werden benannt. Auch die
                 Frage, wer entscheidet, wenn die KI daneben liegt.
               </div>
             </div>
             <div class="dimension">
-              <div class="dimension__label">03 · Prozesse</div>
+              <div class="dimension__label">
+                <span>03</span>
+                <svg
+                  class="dimension__beak"
+                  viewBox="0 0 40 22"
+                  width="20"
+                  height="11"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="#0E3EFF"
+                    d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"
+                  ></path>
+                </svg>
+                <span>Prozesse</span>
+              </div>
               <div class="dimension__body">
                 Der Arbeitsablauf wird zuerst aufgeräumt und dann gebaut.
                 Umwege fliegen raus, bevor etwas automatisiert wird.
               </div>
             </div>
             <div class="dimension">
-              <div class="dimension__label">04 · Technik und Daten</div>
+              <div class="dimension__label">
+                <span>04</span>
+                <svg
+                  class="dimension__beak"
+                  viewBox="0 0 40 22"
+                  width="20"
+                  height="11"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="#0E3EFF"
+                    d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"
+                  ></path>
+                </svg>
+                <span>Technik und Daten</span>
+              </div>
               <div class="dimension__body">
                 Werkzeug auswählen, anbinden, mit echten Fällen testen.
                 Softwareneutral, wir verdienen an keinem Werkzeug mit.
@@ -475,6 +581,18 @@
         aria-labelledby="person-titel"
       >
         <div class="wrap person">
+          <figure class="person__portrait">
+            <img
+              src="assets/hannah-kaup.jpg"
+              alt="Hannah Kaup, Gründerin von Corvint"
+              width="480"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption class="person__portrait-caption">
+              Hannah Kaup · Gründerin
+            </figcaption>
+          </figure>
           <div class="person__text">
             <h2 id="person-titel" class="person__title">
               Eine Ansprechpartnerin. Das Netzwerk arbeitet dahinter.
@@ -502,6 +620,7 @@
             </div>
           </div>
           <svg
+            class="person__network"
             viewBox="0 0 520 210"
             width="100%"
             aria-labelledby="netz-title"

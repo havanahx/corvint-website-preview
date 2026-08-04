@@ -327,8 +327,45 @@
     render(0);
   }
 
+  function initMenu() {
+    const nav = document.querySelector("[data-nav]");
+    const toggle = document.querySelector("[data-menu-toggle]");
+    const close = document.querySelector("[data-menu-close]");
+    if (!nav || !toggle) return;
+
+    function setOpen(open) {
+      nav.dataset.open = open ? "true" : "false";
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+      document.body.classList.toggle("is-menu-open", open);
+      if (open && close) close.focus();
+      else if (!open) toggle.focus();
+    }
+
+    toggle.addEventListener("click", () => setOpen(nav.dataset.open !== "true"));
+    if (close) close.addEventListener("click", () => setOpen(false));
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.dataset.open === "true") setOpen(false);
+    });
+
+    // Klick auf Nav-Link im Overlay schließt es (bei Anker-Links auf Startseite hilfreich)
+    nav.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => {
+        if (nav.dataset.open === "true") setOpen(false);
+      })
+    );
+
+    // Bei Größer-Wechsel Zustand zurücksetzen (Overlay verschwindet per CSS)
+    const mq = window.matchMedia("(min-width: 901px)");
+    mq.addEventListener("change", (e) => {
+      if (e.matches) setOpen(false);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initFaelle();
     initProbleme();
+    initMenu();
   });
 })();

@@ -52,7 +52,40 @@
         </svg>
         <span class="brand__logo">corvint.</span>
       </a>
-      <nav class="nav" aria-label="Hauptnavigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Menü öffnen"
+        data-menu-toggle
+      >
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path
+            stroke="#2F2325"
+            stroke-width="2"
+            stroke-linecap="round"
+            fill="none"
+            d="M4 7h16M4 12h16M4 17h16"
+          ></path>
+        </svg>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Hauptnavigation" data-nav>
+        <button
+          class="nav__close"
+          type="button"
+          aria-label="Menü schließen"
+          data-menu-close
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path
+              stroke="#2F2325"
+              stroke-width="2"
+              stroke-linecap="round"
+              d="M6 6l12 12M18 6L6 18"
+            ></path>
+          </svg>
+        </button>
         <a class="nav__link" href="angebot.html">KI-Beratung</a>
         <a class="nav__link" href="index.html#grundsaetze">Grundsätze</a>
         <a class="nav__link" href="index.html#was-sich-aendert">KI-Lösungen</a>
@@ -71,7 +104,7 @@
     <main id="main">
       <section class="hero">
         <div class="wrap hero__copy" style="max-width:760px">
-          <p class="eyebrow">Rechtliches</p>
+          <p class="hero__eyebrow">Rechtliches</p>
           <h1 class="hero__title">Datenschutz</h1>
           <p class="hero__lead">
             Diese Seite ist Teil der Vorschau. Sie bekommt im nächsten Schritt
@@ -140,5 +173,7 @@
         © Corvint Consulting · KI, sinnvoll eingearbeitet.
       </div>
     </footer>
+
+    <script src="assets/app.js" defer></script>
   </body>
 </html>

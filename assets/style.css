@@ -1033,7 +1033,7 @@ svg {
 .page__main {
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  gap: 96px;
   min-width: 0;
 }
 
@@ -1080,9 +1080,9 @@ svg {
 .anchor-nav {
   display: flex;
   flex-direction: column;
-  border-top: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
-  padding: 8px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 12px 0;
 }
 .anchor-nav__label {
   font-size: 12px;
@@ -1090,9 +1090,7 @@ svg {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--slate);
-  padding: 6px 4px 10px;
-  border-bottom: 1px solid var(--rule);
-  margin-bottom: 4px;
+  padding: 6px 4px 14px;
 }
 .anchor-nav__link {
   border: 0;
@@ -1125,27 +1123,28 @@ svg {
   clip-path: polygon(0 20%, 100% 50%, 0 80%, 6% 50%);
 }
 
-/* Article-Section (numerierte Content-Blöcke) */
+/* Article-Section (numerierte Content-Blöcke)
+ * Nummer als visueller Anker, keine Trennbalken — Whitespace strukturiert.
+ */
 .article-section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   scroll-margin-top: 100px;
 }
 .article-section__eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--slate);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--blue);
+  letter-spacing: -0.02em;
+  margin-bottom: -4px;
 }
 .article-section__title {
   font-size: 32px;
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  padding-top: 16px;
-  border-top: 2px solid var(--ink);
 }
 .article-section__body {
   font-size: 17px;
@@ -1201,13 +1200,10 @@ svg {
 .faq {
   display: flex;
   flex-direction: column;
-  border-top: 2px solid var(--ink);
+  border-top: 1px solid var(--rule);
 }
 .faq__item {
   border-bottom: 1px solid var(--rule);
-}
-.faq__item[open] {
-  border-bottom-color: var(--ink);
 }
 .faq__summary {
   padding: 20px 0;
@@ -1295,6 +1291,12 @@ svg {
   .article-section__title {
     font-size: 26px;
   }
+  .article-section__eyebrow {
+    font-size: 36px;
+  }
+  .page__main {
+    gap: 64px;
+  }
 }
 @media (max-width: 720px) {
   .page {
@@ -1306,8 +1308,14 @@ svg {
   .sub-hero__title {
     font-size: 30px;
   }
+  .article-section__eyebrow {
+    font-size: 30px;
+  }
+  .article-section__title {
+    font-size: 22px;
+  }
   .page__main {
-    gap: 48px;
+    gap: 56px;
   }
 }
 

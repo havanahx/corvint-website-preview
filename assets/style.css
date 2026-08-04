@@ -1387,6 +1387,138 @@ svg {
   }
 }
 
+/* Startseite: Warum-jetzt-Sektion (3 Argumente) */
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+.reason {
+  border-top: 2px solid var(--ink);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reason__n {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--blue);
+}
+.reason__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+.reason__body {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--slate);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .reasons {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Startseite: Angebote-Karten */
+.offers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.offer {
+  border: 2px solid var(--ink);
+  background: var(--white);
+  padding: 32px 34px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.offer__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--blue);
+  text-transform: uppercase;
+}
+.offer__title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.offer__body {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--slate);
+}
+.offer__price {
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.offer__price-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.offer__price-note {
+  font-size: 12px;
+  color: var(--slate);
+  letter-spacing: 0.06em;
+}
+.offer__link {
+  margin-top: auto;
+  padding-top: 4px;
+}
+.offer__link a {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+@media (max-width: 720px) {
+  .offers {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Startseite: Ergebnis-Sektion (Text links, Karte rechts) */
+.result-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 380px);
+  gap: 56px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .result-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Startseite: Zahlen-Sektion (Text links, Case-Card rechts) */
+.numbers-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 460px);
+  gap: 56px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .numbers-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 /* Was-wir-tun-Grid (Startseite): Prozess-Kette links, Ergebnis-Karte rechts */
 .wwt-grid {
   display: grid;

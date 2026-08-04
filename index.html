@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>corvint. — KI, sinnvoll eingearbeitet</title>
+    <title>corvint. — KI-Beratung und Implementierung für den Mittelstand</title>
     <meta
       name="description"
-      content="Corvint bringt KI in den Alltag mittelständischer Unternehmen: eine Lösung auswählen, die sich lohnt, sauber einführen und im Team verankern. Eine Ansprechpartnerin, ein Vertrag, softwareneutral."
+      content="KI-Beratung und Implementierung für den Mittelstand von 20 bis 200 Mitarbeitenden. Menschen, Technik und Daten, Organisation, Prozesse — softwareneutral, eine Ansprechpartnerin."
     />
     <meta name="theme-color" content="#FAFAFA" />
     <meta name="robots" content="noindex,nofollow" />
@@ -44,10 +44,7 @@
             ></path>
             <circle cx="117" cy="57" r="4" fill="#FAFAFA"></circle>
             <g class="raven__beak">
-              <path
-                fill="#0E3EFF"
-                d="m131 57 30 12-29 5c-4-5-4-11-1-17Z"
-              ></path>
+              <path fill="#0E3EFF" d="m131 57 30 12-29 5c-4-5-4-11-1-17Z"></path>
             </g>
             <path
               fill="none"
@@ -111,17 +108,16 @@
 
     <main id="main">
       <!-- Hero -->
-      <section class="hero">
-        <div class="wrap wrap--hero hero__grid">
-          <div class="hero__copy">
-            <p class="hero__eyebrow">Für Unternehmen von 20 bis 200 Mitarbeitenden</p>
-            <h1 class="hero__title">
-              Ihr wollt oder habt KI. Jetzt braucht sie nur noch eine Aufgabe.
+      <section class="hero" aria-labelledby="hero-titel">
+        <div class="wrap wrap--hero" style="max-width:1080px;margin:0 auto">
+          <div class="hero__copy" style="max-width:none">
+            <p class="hero__eyebrow">Für den Mittelstand von 20 bis 200 Mitarbeitenden</p>
+            <h1 id="hero-titel" class="hero__title">
+              KI-Beratung und Implementierung.
             </h1>
-            <p class="hero__lead">
-              Wir wählen mit euch eine KI-Lösung, die sich lohnt und umsetzbar
-              ist, und bringen sie so in euren Arbeitsalltag, dass sie dort
-              wirklich hilft.
+            <p class="hero__lead" style="max-width:820px">
+              Menschen · Technik und Daten · Organisation · Prozesse.
+              Softwareneutral. Eine Ansprechpartnerin, ein Vertrag.
             </p>
             <div class="hero__actions">
               <a
@@ -131,7 +127,7 @@
                 rel="noopener"
                 >Erstgespräch buchen</a
               >
-              <a class="btn btn--secondary" href="ki-beratung.html">KI-Beratung ansehen</a>
+              <a class="btn btn--secondary" href="#angebote">Angebote ansehen</a>
               <span class="hero__note">30 Minuten · kostenlos</span>
             </div>
             <p class="hero__segments" aria-label="Typische Branchen">
@@ -147,156 +143,98 @@
               <span>technischer Mittelstand</span>
             </p>
           </div>
-
-          <aside class="case-card" aria-label="Beispielrechnung">
-            <div class="case-card__head">
-              Ein Fall aus einem Ingenieurbüro, 60 Mitarbeitende
-            </div>
-            <div class="case-card__body">
-              <div class="case-card__title">Angebote erstellen</div>
-              <div class="bars">
-                <div class="bar">
-                  <div class="bar__row">
-                    <span>vorher, je Angebot</span
-                    ><span class="bar__value">210 Min</span>
-                  </div>
-                  <div class="bar__track">
-                    <div class="bar__fill" style="width: 100%"></div>
-                  </div>
-                </div>
-                <div class="bar">
-                  <div class="bar__row">
-                    <span>nachher, inklusive fachlicher Prüfung</span
-                    ><span class="bar__value bar__value--blue">75 Min</span>
-                  </div>
-                  <div class="bar__track">
-                    <div class="bar__fill bar__fill--blue" style="width: 36%"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="stats">
-                <div>
-                  <div class="stat__value">90 Std</div>
-                  <div class="stat__label">im Monat frei</div>
-                </div>
-                <div>
-                  <div class="stat__value">40</div>
-                  <div class="stat__label">Angebote im Monat</div>
-                </div>
-              </div>
-              <div class="footnote">
-                Beispielwerte. Bei euch rechnen wir denselben Fall mit euren
-                Zahlen und legen jede Annahme offen.
-              </div>
-            </div>
-          </aside>
         </div>
       </section>
 
-      <!-- Was wir tun -->
+      <!-- Ausgangslagen kurz -->
       <section
-        id="was-wir-tun"
         class="section section--top-rule"
-        aria-labelledby="wwt-titel"
+        aria-labelledby="ausgangslagen-titel"
       >
         <div class="wrap section__inner">
-          <div class="section__head-text" style="max-width: 900px">
-            <h2 id="wwt-titel" class="section__title">Was wir tun</h2>
+          <div class="section__head-text" style="max-width:900px">
+            <h2 id="ausgangslagen-titel" class="section__title">
+              Kommt euch das bekannt vor?
+            </h2>
+          </div>
+          <div class="callout">
+            <div class="callout__label">Typische Ausgangssituationen</div>
+            <ul class="callout__list">
+              <li>Lizenzen sind gekauft und werden wenig genutzt.</li>
+              <li>
+                Ein Pilotprojekt läuft im Test und kommt schwer in den Alltag.
+              </li>
+              <li>
+                Eine KI-Lösung läuft, die Wirkung ist unklar oder schwach.
+              </li>
+              <li>
+                Ihr wollt loslegen, aber der erste Schritt fehlt noch.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Warum jetzt anfangen -->
+      <section
+        class="section section--white"
+        aria-labelledby="warum-titel"
+      >
+        <div class="wrap section__inner">
+          <div class="section__head-text" style="max-width:900px">
+            <h2 id="warum-titel" class="section__title">
+              Warum jetzt anfangen.
+            </h2>
             <p class="section__lead">
-              Corvint übernimmt die Verbindungsarbeit zwischen KI-Werkzeug und
-              Alltag. Wir wählen mit euch die Anwendung, die sich lohnt und
-              umsetzbar ist. Danach bringen wir sie so ins Arbeiten, dass sie
-              im Alltag wirklich hilft.
+              Zaudern ist teurer als der erste Schritt. Drei Gründe.
             </p>
           </div>
-
-          <div class="wwt-grid">
-            <div class="wwt-grid__main">
-              <p class="wwt-grid__hint">Konkret heißt das:</p>
-              <ol class="step-chain" aria-label="Schritte der KI-Einführung">
-                <li class="step-chain__item">
-                  <span class="step-chain__n">01</span>
-                  <span class="step-chain__marker" aria-hidden="true"
-                    ><span class="step-chain__dot"></span
-                    ><span class="step-chain__line"></span
-                  ></span>
-                  <span class="step-chain__content">
-                    <span class="step-chain__label">Standortbestimmung</span>
-                    <span class="step-chain__detail"
-                      >Prozesse, Daten und Mitarbeitende einordnen.</span
-                    >
-                  </span>
-                </li>
-                <li class="step-chain__item">
-                  <span class="step-chain__n">02</span>
-                  <span class="step-chain__marker" aria-hidden="true"
-                    ><span class="step-chain__dot"></span
-                    ><span class="step-chain__line"></span
-                  ></span>
-                  <span class="step-chain__content">
-                    <span class="step-chain__label">Anwendungsfall wählen</span>
-                    <span class="step-chain__detail"
-                      >Ein bis zwei Fälle, umsetzbar und wertstiftend für den
-                      ROI.</span
-                    >
-                  </span>
-                </li>
-                <li class="step-chain__item">
-                  <span class="step-chain__n">03</span>
-                  <span class="step-chain__marker" aria-hidden="true"
-                    ><span class="step-chain__dot"></span
-                    ><span class="step-chain__line"></span
-                  ></span>
-                  <span class="step-chain__content">
-                    <span class="step-chain__label">Regeln und Zuständigkeiten</span>
-                    <span class="step-chain__detail"
-                      >Wer darf was, mit welchen Daten.</span
-                    >
-                  </span>
-                </li>
-                <li class="step-chain__item">
-                  <span class="step-chain__n">04</span>
-                  <span class="step-chain__marker" aria-hidden="true"
-                    ><span class="step-chain__dot"></span
-                    ><span class="step-chain__line"></span
-                  ></span>
-                  <span class="step-chain__content">
-                    <span class="step-chain__label">KI-Integration</span>
-                    <span class="step-chain__detail"
-                      >In den Arbeitsablauf einbinden. Schnittstellen und Daten
-                      anbinden. Softwareneutral.</span
-                    >
-                  </span>
-                </li>
-                <li class="step-chain__item">
-                  <span class="step-chain__n">05</span>
-                  <span class="step-chain__marker" aria-hidden="true"
-                    ><span class="step-chain__dot"></span
-                    ><span class="step-chain__line"></span
-                  ></span>
-                  <span class="step-chain__content">
-                    <span class="step-chain__label">Menschen befähigen</span>
-                    <span class="step-chain__detail"
-                      >Führungskräfte und Mitarbeitende, am eigenen Fall.</span
-                    >
-                  </span>
-                </li>
-                <li class="step-chain__item">
-                  <span class="step-chain__n">06</span>
-                  <span class="step-chain__marker" aria-hidden="true"
-                    ><span class="step-chain__dot"></span
-                    ><span class="step-chain__line"></span
-                  ></span>
-                  <span class="step-chain__content">
-                    <span class="step-chain__label">Wirkung messen</span>
-                    <span class="step-chain__detail"
-                      >Vorher und nachher mit euren Zahlen.</span
-                    >
-                  </span>
-                </li>
-              </ol>
+          <div class="reasons">
+            <div class="reason">
+              <span class="reason__n">01</span>
+              <h3 class="reason__title">EU AI Act ist in Kraft.</h3>
+              <p class="reason__body">
+                Die KI-Kompetenzpflicht nach Artikel 4 muss dokumentiert werden.
+                Wer heute anfängt, hat die Nachweise, wenn geprüft wird.
+              </p>
             </div>
+            <div class="reason">
+              <span class="reason__n">02</span>
+              <h3 class="reason__title">Kompetenz braucht Zeit.</h3>
+              <p class="reason__body">
+                KI-Kompetenz kann man nicht kaufen, nur aufbauen. Je länger ihr
+                wartet, desto größer der Nachholbedarf gegenüber Wettbewerbern.
+              </p>
+            </div>
+            <div class="reason">
+              <span class="reason__n">03</span>
+              <h3 class="reason__title">Modul 1 klärt in 8 Wochen.</h3>
+              <p class="reason__body">
+                Bestandsaufnahme, Fälle bewertet, Wirtschaftlichkeit gerechnet.
+                Am Ende wisst ihr, welcher Fall trägt oder wann der beste
+                Startzeitpunkt ist.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Konkrete Ergebnisse -->
+      <section
+        class="section"
+        aria-labelledby="ergebnisse-titel"
+      >
+        <div class="wrap">
+          <div class="result-section">
+            <div class="section__head-text">
+              <h2 id="ergebnisse-titel" class="section__title">
+                Was am Ende dasteht.
+              </h2>
+              <p class="section__lead">
+                Vier Ergebnisse, an denen ihr die Zusammenarbeit messen könnt.
+                Vor dem Start festgelegt, am Ende belegt.
+              </p>
+            </div>
             <aside class="result-card" aria-label="Ergebnis">
               <div class="result-card__label">Am Ende habt ihr</div>
               <ul class="result-card__list">
@@ -382,464 +320,129 @@
         </div>
       </section>
 
-      <!-- Was sich im Ablauf ändert -->
+      <!-- Angebote -->
       <section
-        id="was-sich-aendert"
+        id="angebote"
         class="section section--white"
-        aria-labelledby="ablauf-titel"
+        aria-labelledby="angebote-titel"
       >
         <div class="wrap section__inner">
-          <div class="section__head">
+          <div class="section__head-text" style="max-width:900px">
+            <h2 id="angebote-titel" class="section__title">Unsere Angebote.</h2>
+            <p class="section__lead">
+              Zwei Formate für unterschiedliche Ausgangslagen. Ihr entscheidet,
+              welches passt.
+            </p>
+          </div>
+          <div class="offers">
+            <article class="offer">
+              <div class="offer__label">Beratungsprojekt</div>
+              <div class="offer__title">KI-Beratung</div>
+              <div class="offer__body">
+                Drei Module, aufeinander aufbauend: Standortbestimmung,
+                Implementierung, Eigenständigkeit. Am Ende läuft KI in eurem
+                Alltag, das Team hat die Kompetenz aufgebaut.
+              </div>
+              <div class="offer__price">
+                <span class="offer__price-value">ab 12.900 € netto</span>
+                <span class="offer__price-note"
+                  >Modul 1 · ca. 8 Wochen · Förderung über NRW.BANK.Impuls KI</span
+                >
+              </div>
+              <div class="offer__link">
+                <a href="ki-beratung.html">Zur KI-Beratung →</a>
+              </div>
+            </article>
+
+            <article class="offer">
+              <div class="offer__label">Sparring-Format</div>
+              <div class="offer__title">KI-Sprechstunden</div>
+              <div class="offer__body">
+                Regelmäßige Termine für Führungskräfte und KI-Verantwortliche.
+                Werkzeuge einordnen, Fälle reviewen, Entscheidungen sortieren.
+                Kein Beratungsvertrag, Klarheit ist der Deliverable.
+              </div>
+              <div class="offer__price">
+                <span class="offer__price-value">Paket ab niedriger vierstelliger Bereich</span>
+                <span class="offer__price-note"
+                  >6 Termine · 60 oder 90 Minuten · Verbindlich nach Erstgespräch</span
+                >
+              </div>
+              <div class="offer__link">
+                <a href="ki-sprechstunden.html">Zu den KI-Sprechstunden →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Konkrete Zahlen -->
+      <section
+        class="section"
+        aria-labelledby="zahlen-titel"
+      >
+        <div class="wrap">
+          <div class="numbers-section">
             <div class="section__head-text">
-              <h2 id="ablauf-titel" class="section__title">
-                Was sich im Ablauf ändert
+              <h2 id="zahlen-titel" class="section__title">
+                Was sich verbessert.
               </h2>
               <p class="section__lead">
-                Drei Fälle, die wir häufig zuerst umsetzen. Wählt einen aus —
-                dann seht ihr, wer welchen Schritt macht und was das rechnerisch
-                bringt.
+                Eine Beispielrechnung aus einem Ingenieurbüro mit 60
+                Mitarbeitenden. Der Fall: Angebote erstellen. Bei euch rechnen
+                wir denselben Fall mit euren Zahlen.
+              </p>
+              <p style="margin-top:16px">
+                <a
+                  href="ki-loesungen.html"
+                  style="font-weight:600;border-bottom:1px solid var(--blue)"
+                  >Weitere Anwendungsbeispiele ansehen →</a
+                >
               </p>
             </div>
-            <div class="legend" aria-hidden="true">
-              <span class="legend__item">
-                <svg viewBox="0 0 24 24" width="18" height="18">
-                  <g stroke="#2F2325" stroke-width="2.5" fill="none">
-                    <circle cx="12" cy="8" r="4"></circle>
-                    <path d="M4 22c0-5 4-8 8-8s8 3 8 8"></path>
-                  </g>
-                </svg>
-                Mensch
-              </span>
-              <span class="legend__item">
-                <svg viewBox="0 0 24 24" width="18" height="18">
-                  <rect x="1" y="1" width="22" height="22" fill="#0E3EFF"></rect>
-                  <g fill="#FFFFFF">
-                    <rect x="6" y="8" width="12" height="2"></rect>
-                    <rect x="6" y="12" width="8" height="2"></rect>
-                    <rect x="6" y="16" width="10" height="2"></rect>
-                  </g>
-                </svg>
-                KI
-              </span>
-            </div>
-          </div>
-
-          <div class="tabs" data-faelle-tabs aria-label="Fallauswahl"></div>
-
-          <div
-            id="fall-panel"
-            class="steps"
-            role="tabpanel"
-            data-faelle-steps
-          ></div>
-
-          <div class="summary" role="group" aria-label="Auswertung">
-            <div class="summary__cell">
-              <div class="eyebrow">Aufwand je Vorgang</div>
-              <div class="effort">
-                <span class="effort__old" data-effort-old>210 Min</span>
-                <span class="effort__new" data-effort-new>75 Min</span>
+            <aside class="case-card" aria-label="Beispielrechnung">
+              <div class="case-card__head">
+                Ein Fall aus einem Ingenieurbüro, 60 Mitarbeitende
               </div>
-              <div class="bar__track">
-                <div
-                  class="bar__fill bar__fill--blue"
-                  style="width: 36%"
-                  data-effort-bar
-                ></div>
-              </div>
-            </div>
-            <div class="summary__cell">
-              <div class="eyebrow">Im Monat</div>
-              <div class="monthly">
-                <div class="monthly__row">
-                  <span class="monthly__label">Vorgänge</span>
-                  <span class="monthly__value" data-monthly-menge>40</span>
+              <div class="case-card__body">
+                <div class="case-card__title">Angebote erstellen</div>
+                <div class="bars">
+                  <div class="bar">
+                    <div class="bar__row">
+                      <span>vorher, je Angebot</span
+                      ><span class="bar__value">210 Min</span>
+                    </div>
+                    <div class="bar__track">
+                      <div class="bar__fill" style="width: 100%"></div>
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <div class="bar__row">
+                      <span>nachher, inklusive fachlicher Prüfung</span
+                      ><span class="bar__value bar__value--blue">75 Min</span>
+                    </div>
+                    <div class="bar__track">
+                      <div class="bar__fill bar__fill--blue" style="width: 36%"></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="monthly__row">
-                  <span class="monthly__label">frei werdende Zeit</span>
-                  <span
-                    class="monthly__value monthly__value--blue"
-                    data-monthly-stunden
-                    >90 Std</span
-                  >
+                <div class="stats">
+                  <div>
+                    <div class="stat__value">90 Std</div>
+                    <div class="stat__label">im Monat frei</div>
+                  </div>
+                  <div>
+                    <div class="stat__value">40</div>
+                    <div class="stat__label">Angebote im Monat</div>
+                  </div>
+                </div>
+                <div class="footnote">
+                  Beispielwerte. Bei euch rechnen wir denselben Fall mit euren
+                  Zahlen und legen jede Annahme offen.
                 </div>
               </div>
-            </div>
-            <div class="summary__cell">
-              <div class="eyebrow">Annahmen, offengelegt</div>
-              <div data-annahmen></div>
-            </div>
+            </aside>
           </div>
-        </div>
-      </section>
-
-      <!-- Kommt euch das bekannt vor? -->
-      <section class="section" aria-labelledby="bekannt-titel">
-        <div class="wrap section__inner">
-          <div class="section__head-text">
-            <h2 id="bekannt-titel" class="section__title">
-              Kommt euch das bekannt vor?
-            </h2>
-            <p class="section__lead">
-              Die meisten Unternehmen starten mit einem Werkzeug. Wirkung
-              entsteht, sobald Ziele, Abläufe, Regeln und Menschen mitkommen.
-            </p>
-          </div>
-          <div class="problems">
-            <div
-              class="problems__list"
-              data-probleme-list
-              aria-label="Vier häufige Ausgangslagen"
-            ></div>
-            <div class="answer" id="prob-panel" role="tabpanel">
-              <div class="answer__block">
-                <div class="eyebrow">So ist es meistens</div>
-                <div class="answer__text" data-prob-ist></div>
-              </div>
-              <div class="answer__block">
-                <div class="eyebrow eyebrow--blue">Was daraus wird</div>
-                <div class="answer__text answer__text--muted" data-prob-antwort></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Vier Seiten -->
-      <section
-        class="section section--white"
-        aria-labelledby="vier-seiten-titel"
-      >
-        <div class="wrap section__inner">
-          <h2 id="vier-seiten-titel" class="section__title">
-            Vier Seiten, die zusammenpassen müssen
-          </h2>
-          <div class="dimensions">
-            <div class="dimension">
-              <div class="dimension__label">
-                <span>01</span>
-                <svg
-                  class="dimension__beak"
-                  viewBox="0 0 40 22"
-                  width="20"
-                  height="11"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill="#0E3EFF"
-                    d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"
-                  ></path>
-                </svg>
-                <span>Mensch</span>
-              </div>
-              <div class="dimension__body">
-                Wer damit arbeitet, versteht vorher, was die KI kann und wo ihre
-                Grenzen liegen. Befähigung passend zur Rolle.
-              </div>
-            </div>
-            <div class="dimension">
-              <div class="dimension__label">
-                <span>02</span>
-                <svg
-                  class="dimension__beak"
-                  viewBox="0 0 40 22"
-                  width="20"
-                  height="11"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill="#0E3EFF"
-                    d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"
-                  ></path>
-                </svg>
-                <span>Organisation</span>
-              </div>
-              <div class="dimension__body">
-                Rollen, Zuständigkeiten und Regeln werden benannt. Auch die
-                Frage, wer entscheidet, wenn die KI daneben liegt.
-              </div>
-            </div>
-            <div class="dimension">
-              <div class="dimension__label">
-                <span>03</span>
-                <svg
-                  class="dimension__beak"
-                  viewBox="0 0 40 22"
-                  width="20"
-                  height="11"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill="#0E3EFF"
-                    d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"
-                  ></path>
-                </svg>
-                <span>Prozesse</span>
-              </div>
-              <div class="dimension__body">
-                Der Arbeitsablauf wird zuerst aufgeräumt und dann gebaut.
-                Umwege fliegen raus, bevor etwas automatisiert wird.
-              </div>
-            </div>
-            <div class="dimension">
-              <div class="dimension__label">
-                <span>04</span>
-                <svg
-                  class="dimension__beak"
-                  viewBox="0 0 40 22"
-                  width="20"
-                  height="11"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill="#0E3EFF"
-                    d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"
-                  ></path>
-                </svg>
-                <span>Technik und Daten</span>
-              </div>
-              <div class="dimension__body">
-                Werkzeug auswählen, anbinden, mit echten Fällen testen.
-                Softwareneutral, wir verdienen an keinem Werkzeug mit.
-              </div>
-            </div>
-          </div>
-          <div class="principle-row">
-            <div class="principle-row__lead">
-              Ein Fall zuerst, das ganze Unternehmen später.
-            </div>
-            <div class="principle-row__body">
-              Der erste Anwendungsfall ist bewusst klein. Er soll tragen. Was
-              daran funktioniert, lässt sich übertragen, und der zweite geht
-              deutlich schneller. Große Programme, die alles auf einmal umbauen,
-              kennen wir auch. Meistens vom Zusehen.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Der Weg dahin -->
-      <section class="section" aria-labelledby="weg-titel">
-        <div class="wrap section__inner">
-          <h2 id="weg-titel" class="section__title">Der Weg dahin</h2>
-          <div class="modules">
-            <article class="module">
-              <div class="module__head">
-                <svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true">
-                  <circle cx="15" cy="15" r="14" fill="#2F2325"></circle>
-                  <circle cx="15" cy="15" r="5" fill="#FAFAFA"></circle>
-                </svg>
-                <span class="module__label">MODUL 1 · 4 WOCHEN</span>
-              </div>
-              <div class="module__title">Standort und Anwendungsfälle</div>
-              <div class="module__body">
-                Bestandsaufnahme, Fälle bewertet, Wirtschaftlichkeit gerechnet.
-              </div>
-            </article>
-            <article class="module">
-              <div class="module__head">
-                <svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true">
-                  <circle cx="15" cy="15" r="14" fill="#2F2325"></circle>
-                  <circle cx="15" cy="15" r="5" fill="#FAFAFA"></circle>
-                </svg>
-                <span class="module__label">MODUL 2 · 8 WOCHEN</span>
-              </div>
-              <div class="module__title">Implementierung und Verankerung</div>
-              <div class="module__body">
-                Ablauf aufgeräumt, Technik angebunden, Menschen befähigt, Nutzen
-                gemessen.
-              </div>
-            </article>
-            <article class="module">
-              <div class="module__head">
-                <svg viewBox="0 0 30 30" width="26" height="26" aria-hidden="true">
-                  <circle cx="15" cy="15" r="14" fill="#E4E2E3"></circle>
-                  <circle cx="15" cy="15" r="5" fill="#FFFFFF"></circle>
-                </svg>
-                <span class="module__label">MODUL 3 · 6 WOCHEN</span>
-              </div>
-              <div class="module__title">Eigenständigkeit</div>
-              <div class="module__body">
-                Ansprechperson im Haus, feste Sprechstunde, Wirkung bleibt im
-                Blick.
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Grundsätze (dunkel) -->
-      <section
-        id="grundsaetze"
-        class="section--dark"
-        aria-labelledby="grundsaetze-titel"
-      >
-        <div class="wrap principles">
-          <div>
-            <h2 id="grundsaetze-titel" class="principles__intro-title">
-              Unsere Grundsätze
-            </h2>
-            <div class="principles__intro-body">
-              Fünf Sätze, an denen wir uns messen lassen. Sie entscheiden mit,
-              welche Projekte wir annehmen.
-            </div>
-          </div>
-          <ol class="principles__list" role="list">
-            <li class="principle">
-              <svg
-                class="beak"
-                viewBox="0 0 40 22"
-                width="28"
-                height="16"
-                aria-hidden="true"
-              >
-                <path fill="#0E3EFF" d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"></path>
-              </svg>
-              <span class="principle__n">01</span>
-              <span class="principle__text"
-                >KI löst ein Problem und macht etwas messbar besser</span
-              >
-            </li>
-            <li class="principle">
-              <svg
-                class="beak"
-                viewBox="0 0 40 22"
-                width="28"
-                height="16"
-                aria-hidden="true"
-              >
-                <path fill="#0E3EFF" d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"></path>
-              </svg>
-              <span class="principle__n">02</span>
-              <span class="principle__text"
-                >Mitarbeitende sind die Fachleute für ihre Arbeit</span
-              >
-            </li>
-            <li class="principle">
-              <svg
-                class="beak"
-                viewBox="0 0 40 22"
-                width="28"
-                height="16"
-                aria-hidden="true"
-              >
-                <path fill="#0E3EFF" d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"></path>
-              </svg>
-              <span class="principle__n">03</span>
-              <span class="principle__text"
-                >Führungskräfte tragen die Einführung</span
-              >
-            </li>
-            <li class="principle">
-              <svg
-                class="beak"
-                viewBox="0 0 40 22"
-                width="28"
-                height="16"
-                aria-hidden="true"
-              >
-                <path fill="#0E3EFF" d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"></path>
-              </svg>
-              <span class="principle__n">04</span>
-              <span class="principle__text"
-                >Wir bauen auf tragfähigen Prozessen und Daten</span
-              >
-            </li>
-            <li class="principle">
-              <svg
-                class="beak"
-                viewBox="0 0 40 22"
-                width="28"
-                height="16"
-                aria-hidden="true"
-              >
-                <path fill="#0E3EFF" d="M2 3 38 11 3 19c-4-5-4-11-1-16Z"></path>
-              </svg>
-              <span class="principle__n">05</span>
-              <span class="principle__text"
-                >Das Unternehmen wächst mit KI weiter, aus eigener Kraft</span
-              >
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- Ansprechpartnerin + Netzwerk -->
-      <section
-        class="section section--white"
-        aria-labelledby="person-titel"
-      >
-        <div class="wrap person">
-          <figure class="person__portrait">
-            <img
-              src="assets/hannah-kaup.jpg"
-              alt="Hannah Kaup, Gründerin von Corvint"
-              width="480"
-              height="600"
-              loading="lazy"
-            />
-            <figcaption class="person__portrait-caption">
-              Hannah Kaup · Gründerin
-            </figcaption>
-          </figure>
-          <div class="person__text">
-            <h2 id="person-titel" class="person__title">
-              Eine Ansprechpartnerin. Das Netzwerk arbeitet dahinter.
-            </h2>
-            <p class="person__lead">
-              Hannah Kaup führt das Projekt, prüft die Ergebnisse und bleibt für
-              Entscheidungen verantwortlich. Je nach Aufgabe kommen geprüfte
-              Partner aus Technik, Weiterbildung, Datenschutz und Recht dazu.
-            </p>
-            <div class="person__facts">
-              <div>
-                <div class="person__fact-value">Alles aus einer Hand</div>
-                <div class="person__fact-label">
-                  Mensch, Organisation, Prozesse, Technik
-                </div>
-              </div>
-              <div>
-                <div class="person__fact-value">1 Vertrag</div>
-                <div class="person__fact-label">eine Verantwortung</div>
-              </div>
-              <div>
-                <div class="person__fact-value">100 % softwareneutral</div>
-                <div class="person__fact-label">unabhängig von Anbietern</div>
-              </div>
-            </div>
-          </div>
-          <svg
-            class="person__network"
-            viewBox="0 0 520 210"
-            width="100%"
-            aria-labelledby="netz-title"
-            role="img"
-          >
-            <title id="netz-title">
-              Hannah in Blau, drei Partner im Netzwerk in Weiß
-            </title>
-            <g stroke="#2F2325" stroke-width="5">
-              <circle cx="100" cy="76" r="27" fill="#FFFFFF"></circle>
-              <path d="M40 186c0-37 27-60 60-60s60 23 60 60z" fill="#0E3EFF"></path>
-              <circle cx="234" cy="66" r="25" fill="#FFFFFF"></circle>
-              <path d="M178 186c0-35 25-56 56-56s56 21 56 56z" fill="#FFFFFF"></path>
-              <circle cx="358" cy="76" r="25" fill="#FFFFFF"></circle>
-              <path d="M302 186c0-35 25-56 56-56s56 21 56 56z" fill="#FFFFFF"></path>
-              <circle cx="470" cy="66" r="25" fill="#FFFFFF"></circle>
-              <path d="M414 186c0-35 25-56 56-56s56 21 56 56z" fill="#FFFFFF"></path>
-            </g>
-            <text
-              x="100"
-              y="26"
-              text-anchor="middle"
-              font-family="Poppins"
-              font-size="15"
-              font-weight="600"
-              fill="#0E3EFF"
-            >
-              Hannah
-            </text>
-          </svg>
         </div>
       </section>
 
@@ -852,8 +455,7 @@
             </h2>
             <p class="cta__lead">
               Im Erstgespräch klären wir eure Ausgangslage und den kleinsten
-              Schritt, der sich lohnt. Wer vorher lieber zehn ehrliche Fragen
-              beantwortet, startet mit dem Selbstcheck.
+              Schritt, der sich lohnt. 30 Minuten, kostenlos, unverbindlich.
             </p>
           </div>
           <div class="cta__actions">
@@ -909,7 +511,7 @@
             <a href="ueber-corvint.html">Über corvint</a>
             <a href="ki-wissen-news.html">KI-Wissen &amp; News</a>
             <a href="kontakt.html">Kontakt</a>
-            <a href="#grundsaetze">Grundsätze</a>
+            <a href="ueber-corvint.html#grundsaetze-page">Grundsätze</a>
           </nav>
           <nav class="site-footer__col" aria-label="Rechtliches">
             <a href="impressum.html">Impressum</a>

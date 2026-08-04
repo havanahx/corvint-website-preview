@@ -1124,46 +1124,63 @@ svg {
 }
 
 /* Article-Section (numerierte Content-Blöcke)
- * Nummer als visueller Anker, keine Trennbalken — Whitespace strukturiert.
+ * Ruhig gehalten: Nummer klein als Zähler, Titel als Blickfang,
+ * keine Trennbalken — Whitespace strukturiert.
  */
 .article-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   scroll-margin-top: 100px;
 }
 .article-section__eyebrow {
-  font-size: 44px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   line-height: 1;
-  color: var(--blue);
-  letter-spacing: -0.02em;
-  margin-bottom: -4px;
+  color: var(--slate);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 .article-section__title {
   font-size: 32px;
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
+  margin-bottom: 8px;
 }
 .article-section__body {
   font-size: 17px;
   line-height: 1.7;
   color: var(--ink);
-  max-width: 68ch;
+  max-width: 66ch;
 }
 .article-section__body p + p {
   margin-top: 1em;
 }
 .article-section__body ul {
-  padding-left: 24px;
-  margin: 12px 0;
+  list-style: none;
+  padding-left: 0;
+  margin: 14px 0;
 }
 .article-section__body li {
-  margin: 8px 0;
+  position: relative;
+  padding-left: 22px;
+  margin: 10px 0;
+}
+.article-section__body li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 10px;
+  height: 1px;
+  background: var(--slate);
 }
 .article-section__body strong {
   font-weight: 600;
+}
+.article-section__body a {
+  border-bottom-width: 1px;
 }
 
 /* Person-Row (Foto + Text nebeneinander im Content) */
@@ -1184,16 +1201,17 @@ svg {
   }
 }
 
-/* Pull-Quote (Hervorhebung im Content) */
+/* Pull-Quote (Hervorhebung im Content) — ohne Balken, nur größerer Text */
 .pull-quote {
   font-size: 22px;
-  font-weight: 600;
-  line-height: 1.35;
-  padding: 4px 0 4px 24px;
-  border-left: 4px solid var(--blue);
+  font-weight: 500;
+  line-height: 1.4;
   color: var(--ink);
-  max-width: 32em;
-  margin: 8px 0;
+  max-width: 30em;
+  margin: 22px 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
 }
 
 /* FAQ (native <details>) */
@@ -1208,14 +1226,20 @@ svg {
 .faq__summary {
   padding: 20px 0;
   font-size: 18px;
-  font-weight: 600;
-  line-height: 1.35;
+  font-weight: 500;
+  line-height: 1.4;
   cursor: pointer;
   list-style: none;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 20px;
+  color: var(--ink);
+  transition: color 150ms ease-out;
+}
+.faq__summary:hover,
+.faq__summary:focus-visible {
+  color: var(--blue);
 }
 .faq__summary::-webkit-details-marker,
 .faq__summary::marker {
@@ -1224,14 +1248,17 @@ svg {
 }
 .faq__summary::after {
   content: "+";
-  font-size: 24px;
-  color: var(--blue);
+  font-size: 20px;
+  color: var(--slate);
   font-weight: 400;
   flex: none;
   line-height: 1;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 .faq__item[open] .faq__summary::after {
-  content: "−";
+  content: "+";
+  transform: rotate(45deg);
+  color: var(--slate);
 }
 .faq__body {
   padding: 0 0 22px;
@@ -1291,11 +1318,8 @@ svg {
   .article-section__title {
     font-size: 26px;
   }
-  .article-section__eyebrow {
-    font-size: 36px;
-  }
   .page__main {
-    gap: 64px;
+    gap: 72px;
   }
 }
 @media (max-width: 720px) {
@@ -1306,9 +1330,6 @@ svg {
     padding: 32px 20px 20px;
   }
   .sub-hero__title {
-    font-size: 30px;
-  }
-  .article-section__eyebrow {
     font-size: 30px;
   }
   .article-section__title {

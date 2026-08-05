@@ -104,15 +104,15 @@
     </header>
 
     <main id="main">
-      <!-- Hero -->
+      <!-- Hero mit Mehrwert-Karte -->
       <section class="hero" aria-labelledby="page-titel">
-        <div class="wrap wrap--hero" style="max-width:1080px;margin:0 auto">
-          <div class="hero__copy" style="max-width:none">
+        <div class="wrap wrap--hero hero__grid">
+          <div class="hero__copy">
             <p class="hero__eyebrow">KI-Sprechstunden</p>
             <h1 id="page-titel" class="hero__title">
               Ihr treibt KI intern. Wir sind der Sparringspartner.
             </h1>
-            <p class="hero__lead" style="max-width:820px">
+            <p class="hero__lead">
               Für Unternehmen, die KI selbst einführen und für bestimmte Themen
               externe Expertise brauchen. Sparring statt Projekt. Umfang
               quartalsweise flexibel festgelegt.
@@ -129,6 +129,68 @@
               <span class="hero__note">30 Minuten · kostenlos</span>
             </div>
           </div>
+
+          <aside class="case-card" aria-label="Euer Mehrwert">
+            <div class="case-card__head">Euer Mehrwert</div>
+            <div class="case-card__body" style="gap:16px">
+              <ol class="benefits">
+                <li class="benefit">
+                  <span class="benefit__n">01</span>
+                  <div>
+                    <p class="benefit__title">
+                      Klarheit für die nächste Entscheidung.
+                    </p>
+                    <p class="benefit__body">
+                      Werkzeug, Fall, Regel oder Roadmap. Mit Experten-Input
+                      entschieden statt intern gerungen.
+                    </p>
+                  </div>
+                </li>
+                <li class="benefit">
+                  <span class="benefit__n">02</span>
+                  <div>
+                    <p class="benefit__title">
+                      Perspektive von außen.
+                    </p>
+                    <p class="benefit__body">
+                      Wir hören zu, hinterfragen und bringen die Perspektive
+                      dazu, die intern fehlt.
+                    </p>
+                  </div>
+                </li>
+                <li class="benefit">
+                  <span class="benefit__n">03</span>
+                  <div>
+                    <p class="benefit__title">
+                      Zeit gespart.
+                    </p>
+                    <p class="benefit__body">
+                      Recherche und Meinungsbildung abgekürzt. In einem
+                      Termin geklärt statt wochenlang selbst gesucht.
+                    </p>
+                  </div>
+                </li>
+                <li class="benefit">
+                  <span class="benefit__n">04</span>
+                  <div>
+                    <p class="benefit__title">
+                      Sichere Entscheidungsgrundlage.
+                    </p>
+                    <p class="benefit__body">
+                      Fundament für teure oder folgenreiche Entscheidungen.
+                      Weniger Bauchgefühl, mehr Basis.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+              <div
+                class="footnote"
+                style="padding-top:14px;border-top:1px solid var(--rule)"
+              >
+                Konkreter Rahmen kommt im Erstgespräch.
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -335,6 +397,40 @@
         </div>
       </section>
 
+      <!-- Sprechstunden-oder-Beratung Zwischen-CTA -->
+      <section
+        class="section"
+        aria-labelledby="fuer-wen-genau-titel"
+      >
+        <div class="wrap section__inner">
+          <div class="section__head-text" style="max-width:820px">
+            <h2 id="fuer-wen-genau-titel" class="section__title">
+              KI-Sprechstunden passt zu euch?
+            </h2>
+            <p class="section__lead">
+              Bucht ein Erstgespräch. Wir klären in 30 Minuten, ob Sparring
+              das passende Format ist und welches Kontingent für euch Sinn
+              ergibt.
+            </p>
+            <div class="hero__actions" style="margin-top:20px">
+              <a
+                class="btn btn--primary"
+                href="https://calendly.com/hannah-corvint/30min"
+                target="_blank"
+                rel="noopener"
+                >Erstgespräch buchen</a
+              >
+              <span class="hero__note">30 Minuten · kostenlos · unverbindlich</span>
+            </div>
+            <p style="margin-top:28px;font-size:15px;color:var(--slate)">
+              Doch lieber
+              <a href="ki-beratung.html" style="font-weight:600">KI-Beratung</a>
+              angucken? Operative Unterstützung für die Einführung.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- CTA -->
       <section class="cta" aria-labelledby="cta-titel">
         <div class="wrap cta__inner">
@@ -343,9 +439,9 @@
               Klingt nach eurem Format?
             </h2>
             <p class="cta__lead">
-              Wir klären im Erstgespräch, ob Sprechstunden das passende Format
-              sind oder ob ihr gerade etwas anderes braucht. 30 Minuten,
-              kostenlos, unverbindlich.
+              Wir klären im Erstgespräch, ob Sparring gerade zu euch passt
+              oder ob ihr etwas anderes braucht. 30 Minuten, kostenlos,
+              unverbindlich.
             </p>
           </div>
           <div class="cta__actions">

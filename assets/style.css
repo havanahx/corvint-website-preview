@@ -3121,6 +3121,46 @@ svg {
   }
 }
 
+/* Netzwerk-Partner-Grafik */
+.partners {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+  max-width: 1160px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+.partners__text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.partners__text p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--slate);
+  margin: 0;
+}
+.partners__graphic {
+  margin: 0;
+}
+.partners__graphic svg {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .partners {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
 /* Hero-Rabe (warum-corvint, Marken-Anker) */
 .hero__raven {
   display: flex;

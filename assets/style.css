@@ -3121,6 +3121,42 @@ svg {
   }
 }
 
+/* People-Grid: Hannah + Hannes nebeneinander */
+.people-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  margin-top: 32px;
+}
+.people-grid .person-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-template-columns: none;
+  margin-top: 0;
+  max-width: none;
+}
+.people-grid .person-block + .person-block {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+.people-grid .person-block__portrait,
+.people-grid .person-block__icon-frame {
+  max-width: 260px;
+  width: 100%;
+}
+.people-grid .qualifications {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .people-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
 /* Netzwerk-Partner-Grafik */
 .partners {
   display: grid;

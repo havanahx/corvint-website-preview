@@ -2013,7 +2013,7 @@ svg {
   margin-top: 3px;
 }
 
-/* Crosscut (Querschnitts-Baustein, blau, unter prozess-kette) */
+/* Crosscut (Querschnitts-Baustein, blau, neben oder unter prozess-kette) */
 .crosscut {
   background: var(--blue-tint);
   padding: 22px 26px;
@@ -2021,6 +2021,30 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+/* Weg-grid: prozess-kette links, crosscut rechts (parallel) */
+.weg-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+  gap: 40px;
+  align-items: start;
+  max-width: 1000px;
+}
+.weg-grid > .crosscut {
+  margin-top: 0;
+  position: sticky;
+  top: 24px;
+}
+@media (max-width: 900px) {
+  .weg-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 820px;
+  }
+  .weg-grid > .crosscut {
+    position: static;
+  }
 }
 .crosscut__label {
   font-size: 12px;

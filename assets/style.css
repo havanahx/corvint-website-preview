@@ -1695,6 +1695,49 @@ svg {
   margin: 0;
 }
 
+/* Startseite: Outcomes / Ergebnisse (2x2 mit Titel + Body pro Kachel) */
+.outcomes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 28px 0 0;
+}
+.outcome {
+  border: 1px solid var(--rule);
+  background: var(--white);
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.outcome__check {
+  flex: none;
+  margin-top: 4px;
+}
+.outcome__title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.outcome__body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--slate);
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .outcomes {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .outcome {
+    padding: 20px 22px;
+  }
+}
+
 /* Startseite: Ausgangssituationen (2x2 Karten-Grid) */
 .situations {
   display: grid;

@@ -3145,6 +3145,12 @@ svg {
 .people-grid .person-block__icon-frame {
   max-width: 260px;
   width: 100%;
+  border: none;
+  background: transparent;
+}
+.people-grid .person-block__portrait-caption {
+  border-top: none;
+  padding: 8px 0 0;
 }
 .people-grid .qualifications {
   grid-template-columns: 1fr;
@@ -3155,6 +3161,76 @@ svg {
     grid-template-columns: 1fr;
     gap: 48px;
   }
+}
+
+/* Person-Info-Blocks (Rolle im Projekt, Kernkompetenz) */
+.person-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.person-info__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.person-info__text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* Aufklappbares "Mehr über" pro Person */
+.person-more {
+  border-top: 1px solid var(--rule);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+.person-more > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.person-more > summary::-webkit-details-marker,
+.person-more > summary::marker {
+  display: none;
+}
+.person-more > summary::after {
+  content: "+";
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--blue);
+}
+.person-more[open] > summary::after {
+  content: "−";
+}
+.person-more__body {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.person-more__body p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0;
+}
+.person-more__body .qualifications {
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 /* Netzwerk-Partner-Grafik */

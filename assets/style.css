@@ -3027,6 +3027,12 @@ svg {
   max-width: 640px;
   margin: 0;
 }
+.section--dark .grundsatz-block__title {
+  color: var(--paper);
+}
+.section--dark .grundsatz-block__body {
+  color: #c7cacf;
+}
 @media (max-width: 720px) {
   .grundsatz-block {
     grid-template-columns: 1fr;

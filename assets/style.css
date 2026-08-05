@@ -2910,6 +2910,224 @@ svg {
   }
 }
 
+/* ======================================================================
+ * Kombi-Design (Redesign-Bausteine)
+ * Haarlinien-Raster, sticky-header, getönte Sektionen, Grundsatz-Block
+ * ==================================================================== */
+
+/* Getönter Section-Hintergrund (statt aktuellem --paper für spezifische Blöcke) */
+.section--tone {
+  background: #f5f7fa;
+  border-top: 1px solid var(--rule);
+  padding: 84px 64px;
+}
+
+/* Haarlinien-Raster (grid mit 1px gap auf grauem grund) */
+.hairline-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 40px 0 0;
+}
+.section--tone .hairline-grid {
+  background: #d5dae1;
+  border-color: #d5dae1;
+}
+.hairline-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.hairline-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.hairline-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.hairline-cell {
+  background: var(--white);
+  padding: 32px 28px 36px;
+  display: flex;
+  flex-direction: column;
+}
+.section--tone .hairline-cell {
+  background: #f5f7fa;
+}
+.hairline-cell__n {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--blue);
+}
+.hairline-cell__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--slate);
+  text-transform: uppercase;
+}
+.hairline-cell__title {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 20px 0 0;
+  color: var(--ink);
+}
+.hairline-cell__body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--slate);
+  margin: 12px 0 0;
+}
+@media (max-width: 900px) {
+  .hairline-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hairline-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .hairline-grid--4,
+  .hairline-grid--2 {
+    grid-template-columns: 1fr;
+  }
+  .hairline-cell {
+    padding: 24px 22px 28px;
+  }
+}
+
+/* Grundsatz-Block (border-left blau, grid label + body) */
+.grundsatz-block {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: 32px;
+  border-left: 2px solid var(--blue);
+  padding: 8px 0 8px 32px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.grundsatz-block__label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.grundsatz-block__title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 12px 0 0;
+  line-height: 1.3;
+}
+.grundsatz-block__body {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--slate);
+  max-width: 640px;
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .grundsatz-block {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-left: 24px;
+  }
+}
+
+/* Outcomes-Grid (2-Spalten, border-top statt Karten) */
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 64px;
+  margin: 40px 0 0;
+}
+.outcome-row {
+  border-top: 1px solid #d5dae1;
+  padding: 28px 0;
+}
+.outcome-row h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  color: var(--ink);
+}
+.outcome-row p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--slate);
+  margin: 12px 0 0;
+}
+@media (max-width: 720px) {
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* Step-Spalten mit blauer border-top (Wie es abläuft) */
+.step-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 40px 0 0;
+}
+.step-col {
+  border-top: 2px solid var(--blue);
+  padding: 20px 0 0;
+}
+.step-col__n {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0;
+}
+.step-col__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 12px 0 0;
+  color: var(--ink);
+}
+.step-col__body {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--slate);
+  margin: 12px 0 0;
+}
+@media (max-width: 900px) {
+  .step-cols {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Portrait grayscale (Hannah + spätere Fotos) */
+.portrait--grayscale img {
+  filter: grayscale(1);
+}
+
+/* Sticky Header mit backdrop-filter */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Angebots-Karten: Modul 1 hervorgehoben (ink border), andere leichter (rule) */
+.offer--highlight,
+.module--highlight {
+  border: 1px solid var(--ink);
+}
+.offer--soft,
+.module--soft {
+  border: 1px solid var(--rule);
+}
+
 /* Preview-Banner (nur Vorschau, nie live) */
 .preview-banner {
   background: var(--ink);

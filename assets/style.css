@@ -1738,21 +1738,23 @@ svg {
   }
 }
 
-/* Startseite: Ausgangssituationen (untereinander) */
+/* Startseite: Ausgangssituationen (untereinander, ohne boxen) */
 .situations {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
   margin: 24px 0 4px;
   max-width: 820px;
 }
 .situation {
-  border: 1px solid var(--rule);
-  background: var(--white);
-  padding: 26px 30px 24px;
+  padding: 22px 0 22px;
+  border-top: 1px solid var(--rule);
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.situation:first-child {
+  border-top: 0;
+  padding-top: 8px;
 }
 .situation__n {
   font-size: 12px;

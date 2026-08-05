@@ -3121,6 +3121,22 @@ svg {
   }
 }
 
+/* Hero-Rabe (warum-corvint, Marken-Anker) */
+.hero__raven {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__raven svg {
+  width: min(100%, 360px);
+  height: auto;
+}
+@media (max-width: 720px) {
+  .hero__raven {
+    display: none;
+  }
+}
+
 /* Portrait grayscale (Hannah + spätere Fotos) */
 .portrait--grayscale img {
   filter: grayscale(1);

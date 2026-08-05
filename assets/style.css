@@ -1771,6 +1771,87 @@ svg {
   margin: 0;
 }
 
+/* Startseite: Warum-jetzt auf dunklem grund (child-styles) */
+.section--dark .section__title {
+  color: var(--paper);
+}
+.section--dark .section__lead {
+  color: var(--slate-light);
+}
+.section--dark .reason {
+  border-top-color: var(--slate);
+}
+.section--dark .reason__title {
+  color: var(--paper);
+}
+.section--dark .reason__body {
+  color: var(--slate-light);
+}
+
+/* Aufklappbare Prozess-Kette (Weg-Sektion) */
+.steps-collapse {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+}
+.step-collapse {
+  border-top: 1px solid var(--rule);
+}
+.step-collapse:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.step-collapse > summary {
+  padding: 16px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  cursor: pointer;
+  list-style: none;
+  transition: color 150ms ease-out;
+}
+.step-collapse > summary::-webkit-details-marker,
+.step-collapse > summary::marker {
+  display: none;
+  content: "";
+}
+.step-collapse > summary:hover,
+.step-collapse > summary:focus-visible {
+  color: var(--blue);
+}
+.step-collapse__n {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--slate);
+  flex: none;
+  width: 32px;
+}
+.step-collapse__label {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  flex: 1;
+  line-height: 1.3;
+}
+.step-collapse__toggle {
+  font-size: 20px;
+  color: var(--slate);
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 150ms ease-out;
+  flex: none;
+}
+.step-collapse[open] .step-collapse__toggle {
+  transform: rotate(45deg);
+}
+.step-collapse__body {
+  padding: 0 0 20px 48px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--slate);
+  margin: 0;
+}
+
 /* Startseite: Warum-jetzt-Sektion (3 Argumente) */
 .reasons {
   display: grid;

@@ -1695,6 +1695,51 @@ svg {
   margin: 0;
 }
 
+/* Startseite: Ausgangssituationen (2x2 Karten-Grid) */
+.situations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0 4px;
+}
+.situation {
+  border: 1px solid var(--rule);
+  background: var(--white);
+  padding: 26px 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.situation__n {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--blue);
+}
+.situation__title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.situation__body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--slate);
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .situations {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .situation {
+    padding: 22px 24px;
+  }
+}
+
 /* Startseite: Warum-jetzt-Sektion (3 Argumente) */
 .reasons {
   display: grid;

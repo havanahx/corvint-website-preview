@@ -2934,6 +2934,25 @@ svg {
   background: #d5dae1;
   border-color: #d5dae1;
 }
+.section--dark .hairline-grid {
+  background: #4a3f42;
+  border-color: #4a3f42;
+}
+.section--dark .hairline-cell {
+  background: var(--ink);
+}
+.section--dark .hairline-cell__title {
+  color: var(--paper);
+}
+.section--dark .hairline-cell__body {
+  color: #c7cacf;
+}
+.section--dark .hairline-cell__n {
+  color: var(--blue);
+}
+.section--dark .hairline-cell__label {
+  color: #a9adb4;
+}
 .hairline-grid--4 {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -3142,15 +3161,40 @@ svg {
   margin-top: 0;
 }
 .people-grid .person-block__portrait,
-.people-grid .person-block__icon-frame {
+.people-grid .person-block__icon-frame,
+.people-grid .person-placeholder {
   max-width: 260px;
   width: 100%;
-  border: none;
+  border: none !important;
   background: transparent;
 }
 .people-grid .person-block__portrait-caption {
   border-top: none;
   padding: 8px 0 0;
+}
+
+/* Einheitlicher Placeholder (Hannes, bis Foto da) */
+.person-placeholder {
+  aspect-ratio: 4 / 5;
+  background: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.person-placeholder__initials {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.person-placeholder__note {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
 }
 .people-grid .qualifications {
   grid-template-columns: 1fr;
